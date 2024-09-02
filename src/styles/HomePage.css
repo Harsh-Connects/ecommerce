@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* For Webkit Browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 8px; /* Adjust the width to make the scrollbar narrower */
+    height: 8px; /* Adjust the height for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track {
+    background: #f4f7f6; /* Background color of the scrollbar track */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #333; /* Color of the scrollbar handle */
+    border-radius: 10px; /* Rounded corners for the handle */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #777; /* Darker color when hovering over the handle */
+}
+
+/* General Styling */
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+}
+
+h1, h4 {
+    color: #212529;
+}
+
+.all{
+    color: #2874f0 !important;
+    font-weight: 600 !important;
+}
+.row {
+    margin: 0;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+/* Category and Price Filters */
+.col-md-3 {
+    flex: 0 0 23%;
+    background-color: #eeeaea;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border-left: 5px solid #2874f0; /* Stand-out effect */
+    max-height: 415px;
+}
+
+.filter-btn{
+    margin-top: 30px !important;
+}
+
+.col-md-3 h4 {
+    color: #2874f0;
+    font-weight: 600 !important;
+    margin-bottom: 15px;
+}
+
+.col-md-3 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.col-md-3 ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e7e1e1;
+    transition: color 0.3s ease;
+}
+
+.col-md-3 ul li:hover {
+    color: #2874f0;
+    cursor: pointer;
+}
+
+.filter-font{
+    font-weight: 500 !important;
+}
+
+/* Darken Checkboxes and Radio Buttons */
+input[type="checkbox"],
+input[type="radio"] {
+    accent-color: black !important; /* Dark gray color */
+    cursor: pointer;
+    transform: scale(1.1) !important; /* Slightly increase size */
+    transition: transform 0.3s ease;
+}
+
+input[type="checkbox"]:hover,
+input[type="radio"]:hover {
+    transform: scale(1.2) !important; /* Increase size on hover */
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+    background-color: #2874f0; /* Change color when checked */
+    border-color: #2874f0;
+}
+
+
+/* Filters Reset Button */
+.btn-danger {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    background-color: #ff4d4f;
+    border: none;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background-color: #e04344;
+    transform: translateY(-2px);
+}
+
+/* Product Cards */
+.card {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    margin-right: 2.25rem !important;
+    background-color: #eeeaea;
+    margin-bottom: 30px !important;
+  
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.03);
+}
+
+.addtocart{
+    background-color: #2874f0;
+    opacity: 0.9;
+}
+
+.addtocart:hover{
+    background-color: #2367d5;
+    transform: scale(1.02);
+}
+
+.card img {
+    transition: transform 0.5s ease;
+    height: 200px;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card-body {
+    padding: 20px;
+    background-color: #eeeaea;    
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.card:hover .card-title {
+    color: #2874f0;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 15px;
+    font-family: "Roboto";
+}
+
+/* Load More Button */
+.btn-warning {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #ffcc00;
+    color: #333;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn-warning:hover {
+    background-color: #ff9900;
+    transform: translateY(-2px);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .col-md-3 {
+        margin-bottom: 20px;
+    }
+
+    .col-md-9 {
+        padding: 0 15px;
+    }
+
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .btn-warning {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .btn-warning {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
+
+.carousel-image-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-image-class {
+    margin-top: 7px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin-left: 30px;
+    transition: transform 0.5s ease;
+}
+
+.my-image-class:hover {
+    transform: scale(1.03);
+}
+
+/* .carousel-image-wrapper:hover .my-image-class {
+    transform: scale(1.05);
+} */
+
+.carousel-image-wrapper .my-image-class:nth-child(1) {
+    animation: fadeIn 2s;
+}
+
+.carousel-image-wrapper .my-image-class:nth-child(2) {
+    animation: fadeIn 2.5s;
+}
+
+.carousel-image-wrapper .my-image-class:nth-child(3) {
+    animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.carousel-item-padding-40-px {
+    padding: 10px;
+}
+
+.carousel-container {
+    margin: 0;
+    padding: 0;
+}
+
+.my-image-class {
+    width: 100%;
+    height: 300px;
+    margin: 0;
+    padding: 0;
+}
+
+.arrow {
+    z-index: 0;
+}
